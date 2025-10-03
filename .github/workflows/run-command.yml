@@ -1,0 +1,11 @@
+name: Run command
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show FLAG length
+        env:
+          FLAG: ${{ secrets.FLAG }}
+        run: echo "FLAG length is ${#FLAG}"
